@@ -37,7 +37,7 @@ def textToImageFnc(prompt_data):
     encoded_image = artifact.get("base64").encode('utf-8') #encode the image to bytes
     image_bytes = base64.b64decode(encoded_image) 
 
-    output_image_path = f"static/images/{image_counter}.png"
+    output_image_path = f"static/trash/{image_counter}.png"
     image_counter += 1
     with open(output_image_path, 'wb') as image_file:
         image_file.write(image_bytes)

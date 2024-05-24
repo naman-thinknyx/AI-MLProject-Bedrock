@@ -1,5 +1,5 @@
-# Python bytecode files
-__pycache__/
+# # Python bytecode files
+# __pycache__/
 
-# Image files
-static/images/
+# # Image files
+# static/images/

@@ -21,6 +21,7 @@ def images():
         prompt = request.form['message']
 
         image_path = textToImageFnc(prompt)
+        print(image_path)
         return render_template('images.html', path = image_path, prompt=prompt)
     
     return render_template('images.html')
