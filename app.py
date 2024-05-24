@@ -26,9 +26,6 @@ def images():
     return render_template('images.html')
 
 
-@app.route("/sound") 
-def sound():
-    return render_template('sound.html')
 
 if __name__ == '__main__':
     app.run(debug = True) 
