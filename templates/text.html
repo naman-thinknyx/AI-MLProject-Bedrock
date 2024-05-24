@@ -22,15 +22,18 @@
         <div class="chat-body" id="chat-body">
           
           {% if prompt %}
-          <b><p>Q:  {{ prompt }}</p></b>
+          <div style= "background-color: grey; color: white; border-radius: 30px; border: 1px solid black"> 
+            <b><p style= "padding-right: 10px; text-align: right; font-family: monospace;">{{ prompt }}</p></b>
+          </div>
           {% endif %}
 
           <br> 
           <!-- Type responses here -->
           
           {% if response %}
-          
-              <p> <b>Ans:</b> {{ response }}</p>
+          <div style= "background-color: grey; color: white; border-radius: 15px; border: 1px solid black"> 
+            <b><p style= "padding-right: 10px; padding-left:10px; font-family: monospace;">{{ response }}</p></b>
+          </div>
           {% endif %}
         </div>
         
