@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NyxChat</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}" />
+    <link rel= "SHORTCUT ICON" href= "{{url_for('static', filename='images/Nyx.png')}}" >
   </head>
   <body>
     <div class="main-container">
       <div class="sidebar">
-        <img style="height: 70px;width: 200px"src="{{url_for('static', filename='images/logo.png')}}" alt="Italian Trulli"><br><br>
+        <a href="/"> <img style="height: 70px;width: 200px"src="{{url_for('static', filename='images/logo.png')}}" alt="Italian Trulli"><br><br> </a>
         <h2 class="h2">More Options</h2>
         <a href = "/" ><button class="sidebar-button">Text</button></a>
         <a href = "/images" ><button class="sidebar-button">Images</button></a>
