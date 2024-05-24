@@ -4,7 +4,7 @@ import base64
 
 image_counter = 0
 
-def text_to_image(prompt_data):
+def textToImageFnc(prompt_data):
     global image_counter
     bedrock = boto3.client(service_name = "bedrock-runtime")
 

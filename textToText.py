@@ -1,7 +1,7 @@
 import boto3
 import json 
 
-def text_to_text(prompt_data):
+def textToTextFnc(prompt_data):
     bedrock = boto3.client(service_name = "bedrock-runtime")
 
     payload = {
