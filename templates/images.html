@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThinkChat</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="sidebar">
+        <img style="height: 70px;width: 200px"src="{{url_for('static', filename='images/logo.png')}}" alt="Italian Trulli"><br><br>
+        <h2 class="h2">More Options</h2>
+        <a href = "/" ><button class="sidebar-button">Text</button></a>
+        <a href = "/images" ><button class="sidebar-button">Images</button></a>
+        
+      </div>
+      <div class="chat-container">
+        <div class="chat-header">
+          <h1>Let's create some images</h1>
+        </div>
+        <div class="chat-body" id="chat-body">
+          <!-- Chat messages will appear here -->
+          {% if prompt %}
+          <div style= "background-color: grey; color: white; border-radius: 30px; border: 1px solid black"> 
+            <b><p style= "padding-right: 10px; text-align: right; font-family: monospace;">{{ prompt }}</p></b>
+          </div>
+          
+          {% endif %}
+
+          <br> 
+          {% if path %}
+            <img src = "{{path}}" height=400 width=400>
+          {% endif %}
+        </div>
+        <form method="POST" action="/images">
+          <div class="chat-footer">
+              <textarea
+                  id="chat-input"
+                  name="message"
+                  placeholder="Type a message..."
+                  rows="1"
+              ></textarea>
+              <button id="send-button" type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>
